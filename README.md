@@ -1,5 +1,8 @@
 # Test01
 初学者的随手练习档案
+
+
+
 #include<stdio.h>
 int main()
 {
@@ -31,3 +34,6 @@ int main()
 		}
 	}
 }
+
+
+

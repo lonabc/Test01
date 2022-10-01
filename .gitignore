@@ -1,52 +1,31 @@
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+ #include<stdio.h>
+int main()
+{
+	int count = 0;
+	
+	for (int i = 2; i <= 10; i++)
+	{
+		char op = 'q';
+		for (int g = 2; g < i; g++)
+		{
+			int m = i % g;
+			if (m == 0)
+			{
+				op = 'a';
+				break;
+			}
+		}
+		if (op == 'q')
+		{
+			
+				printf("i=%d",i );
+				printf(" ");
+				count++;
+				if (count == 8)
+				{
+					printf("\n");
+					count = 0;
+				}
+		}
+	}
+}

@@ -1,8 +1,8 @@
-# Test01
-初学者的随手练习档案
+# CTest01
+c语言初学者的随手练习档案
 
 
-
+//输出100以内的素数
 #include<stdio.h>
 int main()
 {

@@ -35,5 +35,43 @@ int main()
 	}
 }
 
+------------------------------------------------------------------------------------------------------------------------
+ int main() 
+{
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int left = 0;
+	int right = 0;
+	int yyds = sizeof(arr) / sizeof(arr[0]);
+	right = yyds - 1;
+	int bb = 9;
 
+       while (left <= right)
+	{ 
+		int mid =(left + right)/ 2;
+		if (arr[mid] > bb)
+		{
+			right = mid - 1;
+		}
+		else if (arr[mid] < bb)
+		{
+			left = mid + 1;
+		}
+		else  if (arr[mid]=bb)
+		{
+			printf("该数下标为 ;%d\n", mid);
+			break;
+		}
+		 
+		 
+
+	}
+	if (left > right)
+	{
+		printf("该数不存在");
+
+	}
+	return 0;
+	
+	
+}
 

@@ -90,3 +90,29 @@ int main()
 	printf("该电影电影的时长是；%0.3f", nv.time);
 	return 0;
 }
+-----------------------------------------------------------------------------------------------
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<windows.h>
+int main()
+{
+	char m[] = "Welcome to chaohu ";
+	char n [] = "******************";
+	int rightm = sizeof(m) / sizeof(m[0]);
+	rightm = rightm - 2;
+	int left = 0;
+	 
+	while (left <= rightm)
+	{
+		 
+		n[rightm] = m[rightm];
+		n[left] = m[left];
+		printf("%s\n",n);
+		Sleep (1000);//单位毫秒
+		left++;
+		rightm--;
+	}
+	system("cls");
+	return 0;
+}

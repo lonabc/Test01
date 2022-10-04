@@ -74,4 +74,19 @@ int main()
 	
 	
 }
+--------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
 
+struct Movie
+{
+	char name[20];
+	float time;
+
+};
+int main()
+{
+	struct Movie nv = { "月球陨落" ,2.2 };
+	printf("该电影的名称是；%s\n",nv.name);
+	printf("该电影电影的时长是；%0.3f", nv.time);
+	return 0;
+}

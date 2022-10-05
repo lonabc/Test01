@@ -116,3 +116,21 @@ int main()
 	system("cls");
 	return 0;
 }
+----------------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+
+void Swap(int* bn, int* bh)
+{
+	int temp = 2;
+	temp = *bh;
+	*bh = *bn;
+	*bn = temp;
+}
+int main()
+{
+	int a = 12;
+	int b = 21;
+	printf("a=%d\n,b=%d\n",a,b);
+	Swap(&a, &b);
+		printf("a=%d\n ,b=%d\n",a,b);
+}

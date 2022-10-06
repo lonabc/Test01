@@ -134,3 +134,35 @@ int main()
 	Swap(&a, &b);
 		printf("a=%d\n ,b=%d\n",a,b);
 }
+
+------------------------------------------------------------------------------------------------------------------------------------
+#define  _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	char password[] = { 0 };
+	for (int mbcc = 1; mbcc <= 3; mbcc++)
+	{
+		scanf("%s", password);
+		if (strcmp(password,"23456") == 0)
+		{
+			printf("您好殷传国先生");
+			break;
+
+
+		}
+		else
+		{
+			printf("您好，您的密码错误，请在次输入");
+		}
+		if (mbcc== 3)
+		{
+			printf("您的账户已被冻结");
+			break;
+		}
+	}
+	return 0;
+}

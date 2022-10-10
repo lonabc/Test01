@@ -166,3 +166,40 @@ int main()
 	}
 	return 0;
 }
+--------------------------------------------------------------------------------------
+#include<stdio.h>
+#include<math.h>
+
+int Suoi_w(int g)
+{
+	int hg = 1;
+	for (int r = 2; r < g; r++)
+	{
+		int bv = g % r;
+		if (bv == 0)
+		{
+			hg = 0;
+			return 0;
+		}
+		return 1;
+	}
+}
+int main()
+{
+	int hgd = 0;
+	for (int y = 100; y <= 200; y++)
+	{
+		int h = Suoi_w(y);
+		if (h == 1)
+		{
+			
+			printf("%d ",y);
+			hgd++;
+			if (hgd == 8)
+			{
+				hgd = 0;
+				printf("\n");
+			}
+		}
+	}
+}

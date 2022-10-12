@@ -203,3 +203,54 @@ int main()
 		}
 	}
 }
+----------------------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+
+int bvc(int arr[], int j ,int sz)
+{
+	 
+	int right = sz - 1;
+	int left = 0;
+
+	while (right >= left)
+	{
+
+		int mid = (right + left) / 2;
+		if (arr[mid] > j)
+		{
+			right = mid - 1;
+		}
+		else if (arr[mid] < j)
+		{
+			left = mid + 1;
+		}
+		else
+		{
+			return mid;
+			break;
+		}
+	
+	}
+	if (right < left)
+	{
+		return -1;
+	}
+}
+int main()
+{
+	int arr[] = {1,2,3,4,5,6,7,8,9,10};
+	 
+	 
+	int j = 8;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int k = bvc(arr, j,sz);
+	if (k == -1)
+	{
+		printf("找不到指定数值\n");
+	}
+	else {
+		printf("该数值的下标为%d\n",k);
+	}
+	 
+} 
+

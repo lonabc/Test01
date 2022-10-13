@@ -254,11 +254,11 @@ int main()
 	 
 } 
 --------------------------------------------------------------------------------------------------
-include<stdio.h>
+#include<stdio.h>
 
 int main()
 {
- int n,m,v;
+ int n,m,sum;
  scanf("%d",&n);
   for(int i =1;i<=n;i++)
   {

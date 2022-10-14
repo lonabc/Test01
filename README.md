@@ -272,3 +272,23 @@ int main()
   printf("%d\n",sum);
   return 0;
 }
+------
+#define  _CRT_SECURE_NO_WARNINGS 
+#include<stdio.h>
+
+
+int main()
+{
+	int  a, b,add;
+	b = 1;
+	add = 0;
+	scanf("%d",&a);
+	for (int i = 1; i <= a; i++)
+	{
+		b = b * i;
+			add = add + b;
+
+	}
+	printf("%d",add);
+	return 0;
+}

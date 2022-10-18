@@ -292,3 +292,37 @@ int main()
 	printf("%d",add);
 	return 0;
 }
+-----------------------------------------------------------------------------------------
+#define    _CRT_SECURE_NO_WARNINGS 1
+
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+#include<windows.h>
+
+void main()
+{
+	 
+	int i = 0;
+	char password[20] = { 0 };
+	 
+	for (int i = 0; i < 3; i++)
+	{
+		printf("请输入密码：\n");
+	    scanf("%s",&password);
+		 
+		if (strcmp(password , "123456b") == 0)
+		{
+			printf("登入成功\n");
+			break;
+		}
+		else
+		{
+			printf("登录失败\n");
+		}
+	}
+	if (i == 3)
+	{
+		return 0;
+	}
+}

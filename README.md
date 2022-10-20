@@ -326,3 +326,28 @@ void main()
 		return 0;
 	}
 }
+---------------------------------------------------------------------------------------------------
+int Ying(char* e)
+{
+	int m = 0;
+	while (*e != '\0')
+	{
+		m++;
+		e++;
+
+	}
+	return m;
+
+}
+
+
+int main()
+{
+	int c = 0;
+	char  e[] = "hello sir";
+	 
+	c = Ying(e);
+	printf("%d",c);
+	return 0;
+
+}

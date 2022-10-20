@@ -351,3 +351,29 @@ int main()
 	return 0;
 
 }
+-------------------------------------
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+ 
+
+int Fib(int h)
+{
+	 
+	if (h > 1)
+	{
+		return  h * Fib(h - 1);
+	}
+	else
+	{
+		return  1;
+	}
+
+}
+int main()
+{
+	int m = 0;
+	scanf("%d",&m);
+	int b = Fib(m);
+	printf("%d\n",b);
+	return 0;
+} 

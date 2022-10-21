@@ -377,3 +377,47 @@ int main()
 	printf("%d\n",b);
 	return 0;
 } 
+----------------------------------------
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+ 
+int main()
+{
+	printf("请输入三个浮点型数据，每一个数据换行确认；");
+	float m, n, v;
+	scanf("%f %f %f",&m,&n,&v);
+	if (n > v)
+	{
+
+		if (v > m)
+		{
+			printf("从大到小为：%2.6f %4.6f %4.6f", n, v, m);
+		}
+		else if (n > m)
+		{
+			printf("从大到小为：%2.6f %4.6f %4.6f", n, m, v);
+		}
+		else
+		{
+			printf("从大到小为：%2.6f %4.6f %4.6f", m, n, v);
+		}
+	}
+	else
+	{
+		if (n > m)
+		{
+			printf("从大到小为：%2.6f %4.6f %4.6f", v, n, m);
+		}
+		else if (m > v)
+		{
+			printf("从大到小为：%2.6f %4.6f %4.6f", m, v, n);
+		}
+		else
+		{
+			printf("从大到小为：%2.6f %4.6f %4.6f", v, m, n);
+		}
+
+	}
+
+	return 0;
+}

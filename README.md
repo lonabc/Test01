@@ -489,3 +489,48 @@ int main()
 
 }
 -------------------------
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<string.h>
+  int main()
+{ 
+	  for (int i = 1; i <= 4; i++)
+	  {
+		  for (int m = 1; m <= 4 - i; m++)
+		  {
+			  printf(" ");
+		  }
+
+		  for (int j = 1; j <= 2 * i - 1; j++)
+		  {
+			  printf("%c", '*');
+		  }
+		  printf("\t");
+		  for (int m = 1; m <= 4 - i; m++)
+		  {
+			  printf(" ");
+		  }
+		  for (int j = 1; j <= 2 * i - 1; j++)
+		  {
+			  printf("%c", '*');
+		  }
+
+		  printf("\n");
+	  }
+
+	  for (int i = 1; i <= 7; i++)
+	  {
+		  for (int j = 1; j <= i; j++)
+		  {
+			  printf(" ");
+		  }
+		  for(int m=1;m<=15-i*2;m++)
+		  {
+			  printf("*");
+           }
+		  printf("\n");
+	  }
+ 	printf("\n殷传国");
+	return 0;
+}
+---------------------------------------

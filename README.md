@@ -564,3 +564,57 @@ int main()
  	printf("\n殷传国");
 	return 0;
 }
+-----------------------------------------
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<string.h>
+#include<math.h>
+#include<Windows.h>
+int binary(int* arr ,int key, int low, int high)
+{
+	int mid = 0;
+	while (low <= high)
+	{
+		mid =( high + low)/2;
+		if (key <= arr[mid])
+		{
+			high = mid - 1;
+		}
+		else {
+			low = mid + 1;
+		}
+
+	}
+	return low;
+}
+void bin(int* arr,int sz)
+{
+	for (int i = 1; i < sz; i++)
+	{
+		int key = arr[i];
+		int loc = binary(arr,key,0,i);
+		if (loc !=i)
+		{
+			for (int j = i - 1; j >= loc; j--)
+			{
+				arr[j + 1] = arr[j];
+			}
+			arr[loc] = key;
+		}
+	}
+}
+
+int main()
+{
+	int arr[5] = {2,3,1,5,4};
+	int sz = sizeof(arr) /sizeof( arr[0]);
+	bin(arr,sz);
+	int left = 0;
+	int right = sz - 1;
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d ",arr[i]);
+	}
+	printf("\n殷传国");
+	return 0;
+}
